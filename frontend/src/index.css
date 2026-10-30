@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#080c14] text-slate-100 font-sans antialiased;
+    background-image: 
+      radial-gradient(circle at 15% 15%, rgba(56, 189, 248, 0.03) 0%, transparent 40%),
+      radial-gradient(circle at 85% 85%, rgba(16, 185, 129, 0.02) 0%, transparent 40%);
+  }
+
+  /* Custom scrollbar for financial terminal feel */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0b111e;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #334155;
+  }
+}
+
+.terminal-border {
+  @apply border border-slate-800/80;
+}
+
+.terminal-card {
+  @apply bg-[#0f172a]/90 backdrop-blur-sm border border-slate-800/90 rounded-xl shadow-lg;
+}
+
+.terminal-glass {
+  @apply bg-slate-900/60 backdrop-blur-md border border-slate-800/60;
+}
